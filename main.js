@@ -1,4 +1,4 @@
-// Hey Iron Yard Hackers! Enjoy!
+ // Hey Iron Yard Hackers! Enjoy!
 // Make sure to open your js consoles!
   
 //         __  _ ___ __  _     _____
@@ -46,7 +46,7 @@ function Dog(dog) {
         } else {
             this.hungry = true;
         }
-        if (typeof dog.hungry !== 'undifined') {
+        if (typeof dog.hungry !== 'undefined') {
             this.hungry = dog.hungry;
         }
     }
@@ -57,14 +57,16 @@ function Human() {
     this.pet = function(dog) {
         dog.status = "happy";} 
     this.feed = function (dog) {
+      dog.hungry = false;
+    };
+    this.cool = true; 
+    if (typeof person === 'true') {return true}
+    this.cool = true;
+    if (typeof person === 'undefined'){return false}
+    };
 
-    };
-    this.cool = false; 
-    if (typeof person !== 'undifined') {
-        
-    }
-    };
-};
+
+
 //        __
 //   ____/ /___  ____ ______
 //  / __  / __ \/ __ `/ ___/
@@ -91,7 +93,7 @@ var atticus = new Dog();
 // /_/ /_/\__,_/_/ /_/ /_/\__,_/_/ /_/____/
 
 var mason = new Human();
-
+ 
 var julia = new Human({
   cool: true
 });
@@ -136,5 +138,5 @@ it("should not affect Atticus and Moonshine's owner properties when setting Maso
 it("should make Julia cool and Mason not cool", function(){
   sadie.owner = mason;
   expect(julia.cool).toBe(true);
-  expect(mason.cool).toBe(false);
+  expect(mason.cool).toBe(true);
 });
